@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Culture & Vie au Niger</title>
+  <link rel="icon" href="images/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;900&family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-bg: linear-gradient(120deg, #f9ecd2 0%, #ffe6b3 50%, #ecf2fa 100%);
+      --color-accent: #417047;
+      --color-accent2: #294972;
+      --color-gold: #ffd864;
+      --color-glass: rgba(255,255,255,0.70);
+      --color-glass-border: rgba(240,207,132,0.25);
+      --shadow-hero: 0 8px 80px 0 #29497229;
+      --shadow-btn: 0 7px 38px #2949722b;
+      --glow-btn: 0 0 15px 0 #ffd864, 0 0 44px 4px #41704733;
+    }
+    html, body {
+      margin: 0; padding: 0;
+      min-height: 100vh;
+      background: var(--color-bg);
+      font-family: 'Manrope', Arial, sans-serif;
+      color: var(--color-accent2);
+      overflow-x: hidden;
+    }
+    body {
+      display: flex; flex-direction: column;
+      min-height: 100vh;
+      justify-content: center; align-items: center;
+    }
+    .hero {
+      min-height: 90vh;
+      width: 100vw;
+      background-image: url('images/accueil.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      box-shadow: var(--shadow-hero);
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset:0;
+      background: radial-gradient(circle at 62% 45%, #41704788 0%, #294972dd 100%);
+      opacity: 0.62;
+      z-index: 1;
+    }
+    .hero-glass {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: var(--color-glass);
+      border: 2.5px solid var(--color-glass-border);
+      border-radius: 28px;
+      box-shadow: 0 14px 64px 0 #29497233;
+      backdrop-filter: blur(11px);
+      padding: 3.7em 2.2em 3.2em 2.2em;
+      max-width: 520px;
+      margin: 8vh auto 0 auto;
+      animation: glassfade 0.8s cubic-bezier(.57,.05,.4,1.02);
+    }
+    @keyframes glassfade {
+      0% {opacity:0;transform:scale(.94) translateY(38px);}
+      100% {opacity:1;transform:scale(1) translateY(0);}
+    }
+    .hero-glass h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.9rem;
+      font-weight: 900;
+      margin-bottom: 0.4em;
+      color: #294972;
+      text-shadow: 0 6px 32px #fff6, 0 4px 44px #29497219;
+      letter-spacing: 1.3px;
+      line-height: 1.05;
+      background: linear-gradient(90deg,#417047 30%,#ffd864 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-glass p {
+      font-size: 1.29rem;
+      color: #3d4d63;
+      font-weight: 600;
+      margin-bottom: 2.6em;
+      margin-top: 0;
+      line-height: 1.6;
+      text-align: center;
+      text-shadow: 0 4px 19px #fff7, 0 2px 10px #4170470c;
+    }
+    .cta-btn {
+      display: inline-block;
+      padding: 1.14em 2.9em;
+      font-size: 1.19rem;
+      font-family: 'Manrope', Arial, sans-serif;
+      font-weight: 900;
+      border: none;
+      border-radius: 100px;
+      background: linear-gradient(91deg, #ffd864 10%, #417047 100%);
+      color: #294972;
+      box-shadow: var(--shadow-btn), var(--glow-btn);
+      text-decoration: none;
+      letter-spacing: 1.13px;
+      text-shadow: 0 1px 5px #fff, 0 0 14px #ffd86466;
+      transition: background .17s, color .13s, box-shadow .18s, transform .16s;
+      cursor: pointer;
+      outline: none;
+      filter: drop-shadow(0 1px 15px #ffd86433);
+    }
+    .cta-btn:hover, .cta-btn:focus {
+      background: linear-gradient(91deg, #417047 12%, #294972 100%);
+      color: #fff;
+      box-shadow: 0 15px 68px #41704736, 0 0 36px #ffd86499, 0 0 10px #29497255;
+      transform: scale(1.042) translateY(-2px);
+    }
+    @media (max-width:650px) {
+      .hero-glass {padding:2.2em 0.8em 2em 0.8em;max-width:98vw;}
+      .hero-glass h1{font-size:1.33rem;}
+      .hero-glass p{font-size:0.96rem;}
+      .cta-btn{font-size:0.99rem;padding:0.9em 1.8em;}
+    }
+    header, footer {display:none;}
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <div class="hero-glass">
+      <h1>Culture & Vie au Niger</h1>
+      <p>
+        Entrez dans un univers de lumière, de diversité et de créativité.<br>
+        <span style="color:#417047;font-weight:700;opacity:.95;">Explorez l’âme du Niger : histoire, peuples, arts, fêtes, gastronomie, paysages.</span>
+      </p>
+      <a class="cta-btn" href="/histoire/index.html">Visiter le site</a>
+      <!-- Change le href selon ta page d’entrée -->
+    </div>
+  </div>
+</body>
+</html>
